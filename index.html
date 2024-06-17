@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="ru-ru" m_init="2233643202311171224">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Встреча </title>
+	
+	<link rel="stylesheet" href="./site_files/normalize.min.css" media="screen">
+	<link rel="stylesheet" href="./site_files/modal.min.css" media="screen">
+
+	
+	<link rel="stylesheet" href="./site_files/style.min.css" media="screen">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./site_files//favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./site_files/">
+	<link rel="apple-touch-icon" sizes="180x180" href="./site_files//apple-touch-icon.png">
+	<link rel="icon" type="image/x-icon" href="./site_files//favicon.ico">
+
+	<script type="text/javascript" src="./site_files/jquery.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<style>
+		#map {
+			width: 702px;
+			height: 450px;
+		}
+	</style>
+
+	<style type="text/css" id="operaUserStyle">
+		video {
+			filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.50 calc(env(-opera-gx-accent-color-r)/255) calc(env(-opera-gx-accent-color-g)/255) calc(env(-opera-gx-accent-color-b)/255)));
+		}
+	</style>
+
+<script>
+	$(function () {
+		window.modal = {
+			getModal: function (title = 'Заголовок', descr = 'Описание', modal_class = '') {
+				var modal_template = `
+						<div class="modal_bg">
+							<div class="modal_body ${modal_class}">
+								<div class="modal_close"><i class="fa fa-times"></i></div>
+								<div class="modal_inner">
+									<div class="modal_title">${title}</div>
+									<div class="modal_descr">${descr}</div>
+								</div>
+							</div>
+						</div>`;
+				$('body').append(modal_template);
+				$('body').addClass('modal2');
+			},
+			init: function () {
+				$('body').on('click', '.modal_close', function () {
+					$(this).parent().parent().remove();
+					$('body').removeClass('modal2');
+				});
+				$('body').on('click', '.modal_body', function (e) {
+					e.stopPropagation();
+				});
+				$('body').on('click', '.modal_bg', function (e) {
+					$(this).find('.modal_close').click();
+				});
+			}
+		};
+		window.modal.init();
+	});
+</script>
+
+
+<script type="text/javascript" src="./site_files/underscore-min.js"></script>
+
+
+<script type="text/javascript" src="./site_files/script.min.js"></script>
+
+
+
+
+
+
+<meta name="viewport" content="width=1200">
+
+
+<meta name="format-detection" content="telephone=no">
+
+
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+
+
+
+<!-- Google Fonts - Selective Loader -->
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./site_files/css2" rel="stylesheet">
+<style id="page_style">
+	body,
+	#wrapper {
+		font-family: Montserrat, sans-serif;
+	}
+
+	.section .section_inner .title {
+		font-family: Montserrat, sans-serif;
+	}
+
+	a {
+		color: #000000;
+		text-decoration: none;
+	}
+
+
+
+	:root {}
+</style>
+
+
+
+
+
+<style></style>
+
+<link rel="stylesheet" href="./site_files/icon" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+
+
+
+<body class="editor_false  lang_ru     not_ie">
+	<div class="alerts"></div>
+
+
+	<div id="wrapper" class="" style="padding-top: 0px;">
+
+		<div class="section  section2116" style="background-color:#fff;padding-top:0px;padding-bottom:0px"
+			data-id="10831289" id="b_10831289"><a name="a_1691004"></a>
+			<div class="section_inner width1170 logo_center">
+				<div class="wrapp">
+					<div class="menu-toogler square new_burger" style="color:#000;background-color:#fff"><svg>
+							<use xlink:href="/img/menu_burger.svg#menu"></use>
+						</svg></div>
+					<div class="menu1 menu_block animate_menu1" style="color:#333;background-color:#fff;font-size:16px">
+						<ul>
+							<li class="level0"><a href="#main" title="Путешествия">Путешествия</a></li>
+							<li class="level0"><a href="#regioni" title="Регионы">Регионы</a></li>
+							<li class="level0"><a href="#puti">Типы путешествий</a>
+							</li>
+						</ul>
+					</div>
+					<div class="logo">
+						<div class="logo_img"> <img loading="lazy" src="./site_files/1.png" alt="Логотип клуба"> </div>
+					</div>
+					<div class="menu2 menu_block animate_menu1" style="color:#333;background-color:#fff;font-size:16px">
+						<ul>
+							<li class="level0"><a href="#onas" title="О нас">О
+									нас</a></li>
+							<li class="level0"><a href="#otzivy" title="Отзывы">Отзывы</a></li>
+							<li class="level0"><a href="#kontakti" title="Контакты">Контакты</a></li>
+							<li class="level1"><a href="#svyaz" title="Связаться с нами">Связаться с нами</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="no_fontsize  section  fixed section155 clip_none dark" data-hcolor="#5d5d5d"
+			style="background-image:url(./site_files/vid.png);padding-top:80px;padding-bottom:80px;" data-id="10831290"
+			id="b_10831290">
+			<div class="dark"></div>
+			<div class="back_dark" style="opacity:0.55;background:linear-gradient(to bottom,#000000 0%,#000000 100%)">
+			</div>
+			<div class="section_inner all_border  ">
+				<div class="title" style="margin-bottom:10px;font-weight:600">
+					<p><span style="font-size:52px">Туристический клуб "Встреча"</span></p>
+				</div>
+				<div class="sub_title" style="margin-bottom:24px;font-weight:400">
+					<p><em><span style="font-size:24px">Мы предлагаем своим клиентам самые
+								интересные&nbsp;походы.&nbsp;</span></em></p>
+					<p><em><span style="font-size:24px">Получите бесплатную консультацию прямо сейчас!</span></em></p>
+				</div>
+				<div class="arr1">
+					<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+						style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;  font-size: 16px;  font-family: Verdana, Geneva, sans-serif">
+						Выбрать тип путешествия</div>
+					<div class="popup_form">
+						<div class="popup_form_inner">
+							<!--noindex-->
+							<div class="popup_form_close"></div>
+							<div class="popup_form_title">
+								<p style="text-align: center;"><span style="font-size:22px;">Оставьте заявку и оператор свяжется с вами как можно скорее, для консультации.</span></p>
+							</div>
+							<form enctype="multipart/form-data" method="post">
+								<div class="form1"><input type="hidden" name="Название формы" value="">
+									<div class="field">
+										<div class="field_title ">Введите имя</div>
+										<div class="field_description"></div>
+										<div class="field_input field_input_text">
+											<input type="text" required="required" name="Введите имя"
+												placeholder="Введите имя" autocomplete="off">
+										</div>
+									</div>
+									<div class="field">
+										<div class="field_title ">Введите E-mail</div>
+										<div class="field_description"></div>
+										<div class="field_input field_input_email">
+											<input type="email" required="required" name="Введите E-mail"
+												placeholder="mail@mail.ru" autocomplete="off">
+										</div>
+									</div>
+									<div class="field">
+										<div class="field_title ">Введите номер телефона</div>
+										<div class="field_description"></div>
+										<div class="field_input field_input_phone">
+											<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+												required="required" name="Введите номер телефона"
+												placeholder="xxx-xxx-xxx" autocomplete="off">
+										</div>
+									</div>
+									<div class="field">
+										<div class="field_input"><input type="submit" class="submit_btn surround dark"
+												data-hcolor="#f79f00" data-action="thanks" data-metrica_event=""
+												data-fb_pixel="" data-vk_pixel="" data-gtag_event="" data-url=""
+												data-amount="0" data-product_name="" value="Отправить"
+												style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+												autocomplete="off"></div>
+									</div>
+								</div>
+							</form>
+							<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+									href="">Положение</a> и <a target="_blank" href="">Согласие</a> на
+								обработку персональных данных.</div><!--/noindex-->
+						</div>
+					</div>
+					<div class="btn2  animation" data-hcolor="#f79f00"
+						style="color: rgb(255, 255, 255); border-radius: 2em; box-shadow: rgb(225, 225, 225) 0px 0.25em 0px 0.01em; font-size: 16px; font-family: Verdana, Geneva, sans-serif; background-color: transparent;"
+						data-color="rgb(255, 255, 255)">Выбрать регион путешествия</div>
+					<div class="popup_form">
+						<div class="popup_form_inner">
+							<!--noindex-->
+							<div class="popup_form_close"></div>
+							<div class="popup_form_title">
+								<p style="text-align: center;"><span style="font-size:22px;">Оставьте заявку и оператор свяжется с вами как можно скорее, для консультации.</span></p>
+							</div>
+							<form action="#" enctype="multipart/form-data" method="post">
+								<div class="form2"><input type="hidden" name="Название второй формы" value="">
+									<div class="field">
+										<div class="field_title ">Введите имя</div>
+										<div class="field_description"></div>
+										<div class="field_input field_input_text">
+											<input type="text" required="required" name="Введите имя"
+												placeholder="Введите имя" autocomplete="off">
+										</div>
+									</div>
+									<div class="field">
+										<div class="field_title ">Введите E-mail</div>
+										<div class="field_description"></div>
+										<div class="field_input field_input_email">
+											<input type="email" required="required" name="Введите E-mail"
+												placeholder="mail@mail.ru" autocomplete="off">
+										</div>
+									</div>
+									<div class="field">
+										<div class="field_input"><input type="submit" class="submit_btn surround dark"
+												data-hcolor="#f79f00" data-action="thanks" data-metrica_event=""
+												data-fb_pixel="" data-vk_pixel="" data-gtag_event="" data-url=""
+												data-amount="0" data-product_name="" value="Отправить"
+												style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+												autocomplete="off"></div>
+									</div>
+								</div>
+							</form>
+							<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+									href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+								обработку персональных данных.</div><!--/noindex-->
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<!--noindex-->
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+						<!--/noindex-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="" class="clip_none size_700x500  section section1127 decor_line"
+			style="background-color:#fff;padding-top:80px;" data-id="10831291" id="b_10831291"><a name="onas"></a>
+			<div class="noise" style="background-image:url(/img/natural-paper.png)"></div>
+			<div class="section_inner all_border width1170 btn_move2">
+				<div class="arr1">
+					<div data-link="" class="image1 bottom_left  size_700x500"> <img loading="lazy"
+							src="./site_files/5eb0d148d90cf58912a1280fa182d3d2.png"> </div>
+					<div class="right bottom_left size_700x500">
+						<div class="bg_right" style="opacity:1;background:#f5f5f5"></div>
+						<div class="title1"><span style="font-size:36px"><span style="color:#000000"><strong><span
+											style="font-family:montserrat">О нашем клубе</span></strong></span></span>
+						</div>
+						<div class="txt1">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000">Клуб "Встреча" - это туристический клуб, основанный
+											любителями природы и путешествий с целью предоставить уникальные и
+											незабываемые опыты для своих участников. Мы являемся партнерами в вашем
+											путешествии, воплощая вашу мечту о приключениях в
+											реальность.</span></span></span></p>
+						</div>
+						<div class="btn1 surround   dark" data-hcolor="#f79f00"
+							style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0;  font-size: 16px;  font-family: Verdana, Geneva, sans-serif">
+							УЗНАТЬ ПОДРОБНЕЕ</div>
+						<div class="popup_form">
+							<div class="popup_form_inner">
+								<!--noindex-->
+								<div class="popup_form_close"></div>
+								<div class="popup_form_title">
+									<p style="text-align: center;"><span style="font-size:22px;">Оставьте заявку для связи с оператором.</span></p>
+								</div>
+								<form action="#" enctype="multipart/form-data" method="post">
+									<div class="form1"><input type="hidden" name="Название формы" value="">
+										<div class="field">
+											<div class="field_title ">Введите имя</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_text">
+												<input type="text" required="required" name="Введите имя"
+													placeholder="Введите имя" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите E-mail</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_email">
+												<input type="email" required="required" name="Введите E-mail"
+													placeholder="mail@mail.ru" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите номер телефона</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_phone">
+												<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+													required="required" name="Введите номер телефона"
+													placeholder="xxx-xxx-xxx" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_input"><input type="submit"
+													class="submit_btn surround dark" data-hcolor="#f79f00"
+													data-action="thanks" data-metrica_event="" data-fb_pixel=""
+													data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+													data-product_name="" value="Записаться"
+													style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+													autocomplete="off"></div>
+										</div>
+									</div>
+								</form>
+								<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+										href="#">Положение</a> и <a target="_blank" href="#">Согласие</a>
+									на обработку персональных данных.</div><!--/noindex-->
+							</div>
+						</div>
+						<div class="popup_form">
+							<div class="popup_form_inner">
+								<!--noindex-->
+								<div class="popup_form_close"></div>
+								<div class="popup_form_title">
+									<p style="text-align: center;"><span style="font-size:22px;">Запишитесь на встречу с
+											нашим главным архитектором или дизайнером.</span></p>
+								</div>
+								<form action="#" enctype="multipart/form-data" method="post">
+									<div class="form2"><input type="hidden" name="Название формы" value="">
+										<div class="field">
+											<div class="field_title ">Введите имя</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_text">
+												<input type="text" required="required" name="Введите имя"
+													placeholder="Введите имя" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите E-mail</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_email">
+												<input type="email" required="required" name="Введите E-mail"
+													placeholder="mail@mail.ru" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите номер телефона</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_phone">
+												<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+													required="required" name="Введите номер телефона"
+													placeholder="xxx-xxx-xxx" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_input"><input type="submit"
+													class="submit_btn surround dark" data-hcolor="#f79f00"
+													data-action="thanks" data-metrica_event="" data-fb_pixel=""
+													data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+													data-product_name="" value="Отправить"
+													style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+													autocomplete="off"></div>
+										</div>
+									</div>
+								</form>
+								<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+										href="#">Положение</a> и <a target="_blank" href="#">Согласие</a>
+									на обработку персональных данных.</div><!--/noindex-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<!--noindex-->
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+						<!--/noindex-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section132 one clip_none style_0"
+			style="background-color:#ffffff; padding-bottom:80px;--title_margin:10px;--sub_title_margin:24px"
+			data-id="10831292" id="b_10831292"><a name="a_1693993"></a>
+			<div class="section_inner text_block">
+				<div class="title">
+					<p style="text-align:left"><span style="font-size:36px"><span style="color:#000000"><span
+									style="font-family:montserrat"><strong>Так же</strong></span></span></span></p>
+				</div>
+				<div class="text" style="  line-height:1.3">
+					<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+									style="color:#000000"><strong>"Встреча": Ваш путеводитель в мире
+										приключений</strong></span></span></span></p>
+					<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+									style="color:#000000">Клуб "Встреча" - это туристический клуб, основанный любителями
+									природы и путешествий с целью предоставить уникальные и незабываемые опыты для своих
+									участников. Мы являемся партнерами в вашем путешествии, воплощая вашу мечту о
+									приключениях в реальность.</span></span></span></p>
+					<p><br></p>
+					<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+									style="color:#000000"><strong>Наши ценности:</strong></span></span></span></p>
+					<ol>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Стремление к приключениям:</strong> Мы верим,
+											что жизнь полна приключений, и мы стремимся делать каждое путешествие
+											незабываемым и захватывающим.</span></span></span></p>
+						</li>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Безопасность и ответственность:</strong>
+											Безопасность наших участников - наш главный приоритет. Мы тщательно
+											планируем каждый маршрут и обеспечиваем профессиональное
+											сопровождение.</span></span></span></p>
+						</li>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Сообщество и дружба:</strong> "Встреча" - это
+											не просто клуб, это сообщество людей, объединенных общей страстью к
+											приключениям и желанием делиться этим опытом с другими.</span></span></span>
+							</p>
+						</li>
+					</ol>
+					<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+									style="color:#000000"><strong>Что мы можем предложить:</strong></span></span></span></p>
+					<ol>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Индивидуальные маршруты:</strong> Мы создаем
+											индивидуальные маршруты, отвечающие интересам и потребностям наших
+											участников. От пеших походов по горным тропам до экскурсий к культурным
+											достопримечательностям - у нас есть маршрут для
+											каждого.</span></span></span></p>
+						</li>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Профессиональные гиды:</strong> Наши опытные и
+											квалифицированные гиды всегда рядом, чтобы обеспечить безопасность и комфорт
+											во время путешествия, а также поделиться знаниями и интересными фактами о
+											местах, которые мы посещаем.</span></span></span></p>
+						</li>
+						<li style="font-size: 16px; color: rgb(0, 0, 0);">
+							<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+											style="color:#000000"><strong>Незабываемые впечатления:</strong> Мы
+											стремимся создать незабываемые впечатления для наших участников, позволяя им
+											открыть для себя новые культуры, природные красоты и захватывающие
+											приключения.</span></span></span></p>
+						</li>
+					</ol>
+					<p><span style="font-size:20px"><span style="font-family:overpass,sans-serif"><span
+									style="color:#000000">Присоединяйтесь к нам в "Встрече" и откройте для себя мир,
+									полный приключений, дружбы и невероятных впечатлений!</span></span></span></p>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600"
+			class="section section130 clip_none s_mode_s120 mobile_col2      img_square  flex_fix fixed  transparent_ico img_zoom"
+			style="background-color:#ffffff;background-image:url(./site_files/fonya.jpg);padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#ffffff"
+			data-id="10831293" id="b_10831293"><a name="kontakt"></a>
+			<div class="back_dark" style="opacity:0.5;background:linear-gradient(to bottom,#000000 0%,#000 100%)"></div>
+			<div class="dark"></div>
+			<div class="section_inner all_border"
+				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400">
+				<div class="title"><span style="color:#FFFFFF;"><span style="font-size:36px"><strong><span
+									style="font-family:montserrat">СОТРУДНИКИ НАШЕЙ
+									КОМПАНИИ</span></strong></span></span></div>
+				<div class="catalog_items short_text count3 s120  horizontal_align_center">
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.12;background:#637d8b"></div>
+							<div data-link="" class="image1  s120  radius   shadow">
+								<img loading="lazy" src="./site_files/ya.jpg" width="120px" height="120px">
+							</div>
+							<div class="title1"><span style="color:#FFFFFF">Сохибназаров Руслан</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section138 clip_none wide img_zoom"
+			style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;" data-id="10831294" id="b_10831294"><a
+				name="a_1691400"></a>
+			<div class="noise" style="background-image:url(/img/natural-paper.png)"></div>
+			<div class="section_inner">
+				<div class="title">
+					<p style="text-align:left"><span style="font-size:42px;">Один из наших регионов
+							путешествий&nbsp;</span></p>
+				</div>
+				<div class="sub_title">
+					<p style="text-align: left;"><span style="font-size:42px">Тула</span></p>
+				</div>
+				<div class="video ">
+					<div class="video_holder" data-vid="gi_ltHdWqXY" data-hosting="youtube"
+						data-video="https://www.youtube.com/embed/gi_ltHdWqXY"
+						style="width:940px; height:529px; background-image: url(https://i.ytimg.com/vi/gi_ltHdWqXY/hqdefault.jpg);">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="" class="clip_none size_700x500  section section1127 decor_line"
+			style="background-color:#fff;padding-top:80px;padding-bottom:80px;" data-id="10831295" id="b_10831295"><a
+				name="a_1901789"></a>
+			<div class="noise" style="background-image:url(/img/natural-paper.png)"></div>
+			<div class="section_inner all_border width1170">
+				<div class="arr1">
+					<div data-link="" class="image1 bottom_left  size_700x500"> <img loading="lazy"
+							src="./site_files/e04cc58b94d8359d97b1dbf196077976.png"> </div>
+					<div class="right bottom_left size_700x500">
+						<div class="bg_right" style="opacity:1;background:#f5f5f5"></div>
+						<div class="title1">Клуб&nbsp;"Встреча"</div>
+						<div class="txt1">
+							<p>Ваш ключ к миру приключений, где каждый шаг становится неповторимым открытием и каждая
+								встреча - источником вдохновения.</p>
+						</div>
+						<div class="hidden btn1 surround   dark" data-hcolor="#f79f00"
+							style="background-color:#f79f00;  border-radius: 0em;   box-shadow: 0;  font-size: 16px;  font-family: Verdana, Geneva, sans-serif">
+							УЗНАТЬ ПОДРОБНЕЕ</div>
+						<div class="popup_form">
+							<div class="popup_form_inner">
+								<!--noindex-->
+								<div class="popup_form_close"></div>
+								<div class="popup_form_title">
+									<p style="text-align: center;"><span style="font-size:22px;">Запишитесь на встречу с
+											нашим главным архитектором или дизайнером.</span></p>
+								</div>
+								<form action="#" enctype="multipart/form-data" method="post">
+									<div class="form1"><input type="hidden" name="Название формы" value="">
+										<div class="field">
+											<div class="field_title ">Введите имя</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_text">
+												<input type="text" required="required" name="Введите имя"
+													placeholder="Введите имя" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите E-mail</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_email">
+												<input type="email" required="required" name="Введите E-mail"
+													placeholder="mail@mail.ru" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите номер телефона</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_phone">
+												<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+													required="required" name="Введите номер телефона"
+													placeholder="xxx-xxx-xxx" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_input"><input type="submit"
+													class="submit_btn surround dark" data-hcolor="#f79f00"
+													data-action="thanks" data-metrica_event="" data-fb_pixel=""
+													data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+													data-product_name="" value="Записаться"
+													style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+													autocomplete="off"></div>
+										</div>
+									</div>
+								</form>
+								<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+										href="#">Положение</a> и <a target="_blank" href="#">Согласие</a>
+									на обработку персональных данных.</div><!--/noindex-->
+							</div>
+						</div>
+						<div class="popup_form">
+							<div class="popup_form_inner">
+								<!--noindex-->
+								<div class="popup_form_close"></div>
+								<div class="popup_form_title">
+									<p style="text-align: center;"><span style="font-size:22px;">Запишитесь на встречу с
+											нашим главным архитектором или дизайнером.</span></p>
+								</div>
+								<form action="#" enctype="multipart/form-data" method="post">
+									<div class="form2"><input type="hidden" name="Название формы" value="">
+										<div class="field">
+											<div class="field_title ">Введите имя</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_text">
+												<input type="text" required="required" name="Введите имя"
+													placeholder="Введите имя" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите E-mail</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_email">
+												<input type="email" required="required" name="Введите E-mail"
+													placeholder="mail@mail.ru" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_title ">Введите номер телефона</div>
+											<div class="field_description"></div>
+											<div class="field_input field_input_phone">
+												<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6"
+													required="required" name="Введите номер телефона"
+													placeholder="xxx-xxx-xxx" autocomplete="off">
+											</div>
+										</div>
+										<div class="field">
+											<div class="field_input"><input type="submit"
+													class="submit_btn surround dark" data-hcolor="#f79f00"
+													data-action="thanks" data-metrica_event="" data-fb_pixel=""
+													data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+													data-product_name="" value="Отправить"
+													style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+													autocomplete="off"></div>
+										</div>
+									</div>
+								</form>
+								<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+										href="#">Положение</a> и <a target="_blank" href="#">Согласие</a>
+									на обработку персональных данных.</div><!--/noindex-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<!--noindex-->
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+						<!--/noindex-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section clip_none square section143  hold_text"
+			style="background-color:#fff;padding-top:80px;padding-bottom:80px;" data-id="10831298" id="b_10831298"><a
+				name="regioni"></a>
+			<div class="section_inner  width1170" style="--img_radius:0px;--img_grayscale:0;--img_blur:0px">
+				<div class="title">
+					<h1><span style="font-size:50px">Регионы путешествий&nbsp;</span></h1>
+				</div>
+				<div class="images">
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/506af6473f8faab24c49ec7929de140e.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Тула</div>
+							<div class="overlay_image_descr">Город, где история встречается с современностью.</div>
+						</div>
+					</div>
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/c6008814b576f3201d9fa2c37adfb2d4.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Рязань</div>
+							<div class="overlay_image_descr">Уютный провинциальный город с богатой историей, в котором
+								старинные храмы и крепостные стены соседствуют с современными парками и улочками.</div>
+						</div>
+					</div>
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/ec5bd8b2e2b9c9d00392a316e890435e.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Владимир</div>
+							<div class="overlay_image_descr">Величественный город, пропитанный древней русской историей.
+							</div>
+						</div>
+					</div>
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/9106011f4d4f34a1d408a947fe89ec54.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Ярославль</div>
+							<div class="overlay_image_descr">Живописный город на Волге, известный своими уникальными
+								деревянными храмами.</div>
+						</div>
+					</div>
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/1bd1b83848c84ff89e79ceb7cfca16f5.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Тверь</div>
+							<div class="overlay_image_descr">Город, олицетворяющий собой встречу старины и
+								современности.</div>
+						</div>
+					</div>
+					<div class="image_box  image_size_600x450 arr1 "> <img loading="lazy"
+							src="./site_files/ec9b86ac77fff03c74b83d5f6c1926f3.png" width="375px" height="280px">
+						<div class="overlay_image_box" data-link="" data-link-target="">
+							<div class="overlay_image_title">Смоленск</div>
+							<div class="overlay_image_descr">Город с богатой историей, окруженный древними облаками
+								легенд, где каждый уголок пропитан атмосферой величия прошлого.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600"
+			class="section section130 clip_none s_mode_s200 mobile_col2   inner_width   img_square  flex_fix   transparent_ico"
+			style="background-color:#f5f5f5;padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#f5f5f5"
+			data-id="10831297" id="b_10831297"><a name="puti"></a>
+			<div class="noise" style="background-image:url(/img/natural-paper.png)"></div>
+			<div class="noise_new " style="background-image:url(/img/bg_32.png);opacity:0.5"></div>
+			<div class="section_inner all_border"
+				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400">
+				<div class="title">
+					<p><strong><span style="font-size:50px">Типы путешествий</span></strong></p>
+				</div>
+				<div class="sub_title"></div>
+				<div class="catalog_items short_text count3 s200 ">
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/6f829b6e671d979e7f85b817326c805c.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Пешие</span></span></p>
+							</div>
+							<div class="txt1">
+								<p>Это возможность окунуться в природную гармонию, ощутить ритм земли под ногами и
+									вдохнуть свежий воздух далеко от городской суеты. Наши маршруты ведут через
+									живописные тропы, где каждый поворот открывает новые пейзажи и вызывает восторженные
+									восклицания участников.<span style="font-size:17px"></span></p>
+							</div>
+							<div class="price1">От 6999 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+								style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;     ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/76d6d01769d2b7aba5b54b9acbf0827a.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Водные</span></span></p>
+							</div>
+							<div class="txt1">
+								<p>Призваны унести вас по волнам приключений, открывая удивительные миры, доступные
+									только с воды. Наши маршруты прокладываются по захватывающим рекам, озерам и морским
+									просторам, предлагая участникам уникальные перспективы на окружающую красоту и
+									возможность погрузиться в атмосферу истинного приключения.<span
+										style="font-size:17px"></span></p>
+							</div>
+							<div class="price1">От 9999 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+								style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;     ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/9ed4731ed85e6270e7598bac37dbedb6.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Вело</span></span></p>
+							</div>
+							<div class="txt1">
+								<p>Это увлекательное путешествие по дорожным тропам и горным трассам, где каждый оборот
+									педали открывает новые уголки природы и внутренние резервы сил. От живописных
+									маршрутов по лесам и полям до захватывающих велопоходов по горным хребтам, предлагая
+									участникам незабываемые впечатления и возможность ощутить адреналин
+									приключения.<span style="font-size:17px"></span></p>
+							</div>
+							<div class="price1">От 1299 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+								style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;     ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/686b8800ba7537f44e7365cb91ae68fd.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Восхождения</span></span>
+								</p>
+							</div>
+							<div class="txt1">
+								<p>Это не только покорение вершин, но и путь к самопознанию и силе духа. Мы предлагаем
+									уникальные маршруты для альпинистов всех уровней подготовки, от первых шагов на
+									тропе до серьезных альпинистских вызовов. Впечатления от достижения вершины
+									становятся незабываемым источником вдохновения для всей жизни.<span
+										style="font-size:17px"></span></p>
+							</div>
+							<div class="price1">От 32999 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+								style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;     ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/39a57920c409d181bdd44f1092f2659d.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Переходы на
+											легке</span></span></p>
+							</div>
+							<div class="txt1">
+								<p>Это возможность ощутить гармонию с природой, идя по живописным тропам и вдыхая свежим
+									воздухом. Наши маршруты специально разработаны для тех, кто предпочитает активный
+									отдых без излишней физической нагрузки. Присоединяйтесь к нам, чтобы насладиться
+									красотой окружающей природы, не ощущая усталости от длительных походов.<span
+										style="font-size:17px"></span></p>
+							</div>
+							<div class="price1">От 15499 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79f00"
+								style="background-color:#f79f00;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,129,0) ;     ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div class="col_4">
+							<div class="col_bg" style="opacity:0.5;background:#ffffff"></div>
+							<div data-link="" class="image1  s200   "> <img loading="lazy"
+									src="./site_files/ca370a4c91b1465688c345ff9aacd23b.png" width="200px"
+									height="200px"> </div>
+							<div class="title1">
+								<p><span style="font-size:20px"><span style="color:#444444">Ночевки в
+											палатках</span></span></p>
+							</div>
+							<div class="txt1"><span style="font-size:17px"></span>
+								<p>Это возможность погрузиться в атмосферу приключений и пробудить свою связь с
+									природой. Мы организуем уютные лагери в самых живописных уголках природы, где
+									участники могут расслабиться под звездным небом и поделиться впечатлениями в кругу
+									друзей. Наши профессиональные гиды обеспечивают комфорт и безопасность во время
+									ночевок, чтобы каждый участник мог насладиться ночью под открытым небом в полной
+									мере.<br></p><span style="font-size:17px"></span>
+							</div>
+							<div class="price1">От 8999 руб.</div>
+							<div class="btn1 surround  animation  dark" data-hcolor="#f79700"
+								style="background-color:#f79700;  border-radius: 2em;   box-shadow: 0 0.25em 0px 0.01em  rgb(217,121,0) ;  font-size: 18px;   ">
+								Оставить заявку</div>
+							<div class="popup_form">
+								<div class="popup_form_inner">
+									<!--noindex-->
+									<div class="popup_form_close"></div>
+									<div class="popup_form_title">Оставить заявку</div>
+									<form action="#" enctype="multipart/form-data" method="post">
+										<div class="form1"><input type="hidden" name="Название формы" value="">
+											<div class="field">
+												<div class="field_title ">Введите имя</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_text">
+													<input type="text" required="required" name="Введите имя"
+														placeholder="Введите имя" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите E-mail</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_email">
+													<input type="email" required="required" name="Введите E-mail"
+														placeholder="mail@mail.ru" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_title ">Введите номер телефона</div>
+												<div class="field_description"></div>
+												<div class="field_input field_input_phone">
+													<input type="text" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*"
+														minlength="6" required="required" name="Введите номер телефона"
+														placeholder="xxx-xxx-xxx" autocomplete="off">
+												</div>
+											</div>
+											<div class="field">
+												<div class="field_input"><input type="submit"
+														class="submit_btn surround dark" data-hcolor="#f79f00"
+														data-action="thanks" data-metrica_event="" data-fb_pixel=""
+														data-vk_pixel="" data-gtag_event="" data-url="" data-amount="0"
+														data-product_name="" value="Отправить"
+														style="background-color:#f79f00;  border-radius: 0em; box-shadow: 0;  "
+														autocomplete="off"></div>
+											</div>
+										</div>
+									</form>
+									<div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank"
+											href="#">Положение</a> и <a target="_blank" href="#">Согласие</a> на
+										обработку персональных данных.</div><!--/noindex-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup_thanks">
+						<div class="popup_thanks_inner">
+							<!--noindex-->
+							<div class="popup_thanks_close">X</div>
+							<div class="popup_thanks_title">Спасибо за заявку!</div>
+							<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+								время.</div>
+							<!--/noindex-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="#5d5d5d" class="section no_fontsize  fixed  section258 clip_none"
+			style="background-color:#ffffff;background-image:url(./site_files/forma.jpg);padding-top:40px;padding-bottom:40px;"
+			data-id="10831299" id="b_10831299"><a name="svyaz"></a>
+			<div class="back_dark" style="opacity:0.79;background:linear-gradient(to bottom,#000000 0%,#000000 100%)">
+			</div>
+			<div class="section_inner all_border width1170 ">
+				<div class="title">
+					<div><strong><span style="font-size:50px;"><span style="font-family:montserrat">МЫ ЖДЕМ
+									ВАС</span></span></strong></div>
+				</div>
+				<div class="sub_title"><span style="font-size:40px"><strong><span
+								style="font-family:montserrat">ПОСЕТИТЕ НАШ КЛУБ</span></strong></span></div>
+				<div class="content_block">
+					<div class="form_wrapper" style="color:#000000;border-color:#000000;border-radius:0">
+						<div class="form_bg_color" style="opacity:0"></div>
+						<div class="form_title">
+							<p style="text-align: center;"><span style="font-size:20px"><span
+										style="color:#FFFFFF">Оставьте заявку на сайте</span></span></p>
+						</div>
+						<div class="form_sub_title">
+							<p style="text-align: center;"><span style="font-size:16px;"><span
+										style="color:#FFFFFF;">Постараемся ответить как можно скорее!</span></span></p>
+						</div>
+						<div class="form1">
+							<form action="#" enctype="multipart/form-data" method="post">
+								<div class="field"
+									style="--tf-input-color: #ffffff;--tf-input-focus-border-color: #ffffff;">
+									<div class="field_title ">Введите имя</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_text">
+										<input type="text" required="required" name="Введите имя"
+											placeholder="Введите имя" autocomplete="off">
+									</div>
+								</div>
+								<div class="field" style="--tf-input-focus-border-color: #ffffff;">
+									<div class="field_title ">Введите телефон</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_phone">
+										<input data-mask="+7(999) 999 99 99" type="text"
+											pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" required="required"
+											name="Введите телефон" placeholder="+7(999) 999 99 99" autocomplete="off">
+									</div>
+								</div>
+								<div class="field"
+									style="--tf-input-color: #ffffff;--tf-input-focus-border-color: #ffffff;">
+									<div class="field_title ">Введите E-mail</div>
+									<div class="field_description"></div>
+									<div class="field_input field_input_email">
+										<input type="email" required="required" name="Введите E-mail"
+											placeholder="mail@mail.ru" autocomplete="off">
+									</div>
+								</div>
+								<div class="field">
+									<div class="field_input"><input type="submit" class="submit_btn surround dark"
+											data-hcolor="#f79f00" data-action="thanks" data-metrica_event=""
+											data-fb_pixel="" data-vk_pixel="" data-gtag_event="" data-url=""
+											data-amount="0" data-product_name="" value="ОСТАВИТЬ ЗАЯВКУ"
+											style="background-color:#ed7a00;  border-radius: 2em; box-shadow: 0 0.25em 0px 0.01em  rgb(207,92,0) ; font-size: 16px"
+											autocomplete="off"></div>
+								</div>
+							</form>
+						</div>
+						<div class="form_text"><span style="color:#FFFFFF;">Нажимая на кнопку, Вы принимаете </span><a
+								target="_blank" data-cke-saved-href="/?personal_data=1" href="#"><span
+									style="color:#FFFFFF;">Положение</span></a><span style="color:#FFFFFF;"> и </span><a
+								target="_blank" data-cke-saved-href="/?personal_data=2" href="#"><span
+									style="color:#FFFFFF;">Согласие</span></a><span style="color:#FFFFFF;"> на обработку
+								персональных данных.</span></div>
+					</div>
+					<div class="arr_block">
+						<div class="arr1">
+							<div class="col_3">
+								<div class="icon_layer">
+									<div class="mdico1" style="color:#fff"><span style="font-size: 60px;">⏱</span></div>
+									<div class="title1">Преимущества работы с нашей клубом</div>
+								</div>
+								<div class="txt1">
+									<ol>
+										<li style="font-size: 16px; color: rgb(255, 255, 255);">
+											<p>Профессионализм и опыт: Мы обладаем многолетним опытом и экспертизой в
+												области туризма, гарантируя высокий уровень обслуживания и безопасности
+												для наших клиентов.</p>
+										</li>
+										<li style="font-size: 16px; color: rgb(255, 255, 255);">
+											<p>Индивидуальный подход: Мы стремимся понять и удовлетворить потребности
+												каждого клиента, предлагая персонализированные решения и маршруты,
+												соответствующие их интересам и предпочтениям.</p>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="arr1">
+							<div class="col_3">
+								<div class="icon_layer">
+									<div class="mdico1" style="color:#fff"><span style="font-size: 60px;">💡</span>
+									</div>
+									<div class="title1">Еще преимущество работы с нами</div>
+								</div>
+								<div class="txt1">
+									<ol>
+										<li style="font-size: 16px; color: rgb(255, 255, 255);">Широкий выбор услуг:
+											Наша компания предлагает разнообразные туристические услуги - от организации
+											экскурсий и проживания до транспортного обслуживания и поддержки во время
+											путешествия.</li>
+										<li style="font-size: 16px; color: rgb(255, 255, 255);">
+											<p>Качество и надежность: Мы работаем только с проверенными партнерами и
+												поставщиками услуг, чтобы обеспечить нашим клиентам надежные и
+												комфортные условия во время путешествия.</p>
+										</li>
+										<li style="font-size: 16px; color: rgb(255, 255, 255);">
+											<p>Гибкие условия сотрудничества: Мы готовы гибко реагировать на изменения в
+												планах наших клиентов и предоставлять им поддержку и консультации на
+												протяжении всего сотрудничества.</p>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<!--noindex-->
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+						<!--/noindex-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600" class="section section125 clip_none"
+			style="background-color:#ffffff;padding-top:80px;padding-bottom:80px;" data-id="10831300" id="b_10831300"><a
+				name="otzivy"></a>
+			<div class="noise" style="background-image:url(/img/natural-paper.png)"></div>
+			<div class="section_inner all_border width1170 ">
+				<div class="title"><span style="color:#000000"><span style="font-size:36px"><span
+								style="font-family:montserrat"><strong>100% КЛИЕНТОВ ДОВОЛЬНЫ
+									РАБОТОЙ</strong>&nbsp;</span></span></span>
+					<div><strong><span style="color:#696969"><span style="font-size:36px">____</span></span></strong>
+					</div>
+				</div>
+				<div class="sub_title"><span style="font-size:20px">Посмотрите отзывы наших клиентов</span></div>
+				<div class="arr1">
+					<div class="col_2">
+						<div class="image1  radius s150 "><img loading="lazy"
+								src="./site_files/d269218425223c3051c501aa6f882d0d.png"></div>
+						<div class="right s150">
+							<div class="title1"><span style="font-size:20px">Илья, г. Москва</span></div>
+							<div class="txt1"><span style="font-size:17px"></span>Я в восторге от работы с вашей
+								компанией! Организация моего путешествия была безупречной - все детали были продуманы до
+								мелочей. Профессионализм вашей команды и индивидуальный подход к каждому клиенту
+								поразили меня. Огромное спасибо за незабываемый опыт!​​​​​​​<span
+									style="font-size:17px"></span></div>
+						</div>
+					</div>
+					<div class="col_2 last">
+						<div class="image2  radius s150 "><img loading="lazy"
+								src="./site_files/a699ae28536f6a7802b536b24790b05c.png"></div>
+						<div class="right s150">
+							<div class="title2"><span style="font-size:20px">Владимир, г. Санкт-Петербург</span></div>
+							<div class="txt2"><span style="font-size:17px"></span>Отличное обслуживание и высокий
+								уровень сервиса! Я выбрал вашу компанию для организации корпоративного мероприятия, и вы
+								превзошли все мои ожидания. Гибкие условия сотрудничества и оперативное реагирование на
+								наши запросы сделали сотрудничество с вами приятным и беззаботным. Будем обращаться
+								еще!​​​​​​​<span style="font-size:17px"></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="arr1">
+					<div class="col_2">
+						<div class="image1  radius s150 "><img loading="lazy"
+								src="./site_files/287fc171e074ce91f96c0b57fe5acce6.png"></div>
+						<div class="right s150">
+							<div class="title1"><span style="font-size:20px">Алексей, г. Тверь</span></div>
+							<div class="txt1"><span style="font-size:17px"></span>Благодаря вашей компании я открыл для
+								себя новые горизонты и получил незабываемые впечатления! Ваша команда профессионалов
+								создала идеальный маршрут для моего путешествия, учитывая все мои пожелания. Я был
+								приятно удивлен качеством услуг и вниманием к деталям. Спасибо вам за отличную
+								работу!​​​​​​​<span style="font-size:17px"></span></div>
+						</div>
+					</div>
+					<div class="col_2 last">
+						<div class="image2  radius s150 "><img loading="lazy"
+								src="./site_files/aaa6a14d62584eca3f96c13ef3fd917f.png"></div>
+						<div class="right s150">
+							<div class="title2"><span style="font-size:20px">Олег, г. Ярославь</span></div>
+							<div class="txt2"><span style="font-size:17px"></span>Сотрудничество с вашей компанией стало
+								для нас настоящим открытием! Ваша команда оказала нам большую поддержку и помощь в
+								организации нашего семейного отпуска. Мы оценили вашу отзывчивость, профессионализм и
+								заботу о нашем комфорте. Спасибо за замечательный отпуск, который мы провели с вашей
+								помощью!​​​​​​​<span style="font-size:17px"></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_thanks">
+					<div class="popup_thanks_inner">
+						<!--noindex-->
+						<div class="popup_thanks_close">X</div>
+						<div class="popup_thanks_title">Спасибо за заявку!</div>
+						<div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее
+							время.</div>
+						<!--/noindex-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			ymaps.ready(init);
+			function init() {
+				var myMap = new ymaps.Map("map", {
+					center: [55.692110, 37.896496], // Москва
+					zoom: 10
+				});
+				var myPlacemark = new ymaps.Placemark([55.692110, 37.896496], { hintContent: 'Моя точка' },
+				{
+        preset: 'islands#redIcon' 
+    });
+            myMap.geoObjects.add(myPlacemark);
+			}
+		</script>
+		<div class="section section165" style="background-color:#ffffff;" data-id="10831302" id="b_10831302">
+			<a name="kontakti"></a>
+			<div class="section_inner width1170">
+				<div class="title">Контактная информация</div>
+				<div class="content_wrapper">
+					<div class="map_wrapper">
+						<div id="map"></div>
+					</div>
+					<div class="text_block" style="background-color:#f2f2f2">
+						<div class="text">
+							<span style="font-size:36px"><strong>НАШИ КОНТАКТЫ</strong></span>
+							<ul>
+								<li>Адрес: Люберцы, Побратимов д. 19.</li>
+								<li>E-mail: poxod@club.ru</li>
+								<li>Телефон: 8 800 340 14 88&nbsp;- номер поддержки</li>
+								<li>Контактное лицо: Сохибназаров Р.С.</li>
+							</ul>
+						</div>
+						<div class="txt1"><span style="font-size:20px;">Присоединяйтесь к нам в социальных сетях!</span>
+						</div>
+						<div class="social_icons icon-circle">
+							<a target="_blank" class="sn sn-vk link_vk" href="https://vk.com/club225676178"></a>
+							<a target="_blank" class="sn sn-youtube link_youtube"
+								href="https://www.youtube.com/channel/UCMKObeZaDciE1zzcvsZJCxQ"></a>
+							<a target="_blank" class="sn sn-tg link_tg" href="https://t.me/+7qvoDb7hzHMzNzNi"></a>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="section  section109" style="background-color:#eaeaea;padding-top:40px;padding-bottom:40px"
+			data-id="10831303" id="b_10831303"><a name="a_1693992"></a>
+			<div class="section_inner  width1170">
+				<div class="logo_block"> <a href="#" class="link_editor_false logo_img"><img loading="lazy"
+							src="./site_files/2.png"></a>
+					<div class="slogan">
+						<div class="text1">
+							<p><span style="font-family:overpass,sans-serif;"><span style="font-size:22px">Туристический
+										клуб "Встреча"</span></span></p>
+						</div>
+						<div class="text2"><span style="font-family:overpass,sans-serif;"><span
+									style="font-size:20px">Ваш ключ к миру приключений, где каждый шаг становится
+									неповторимым открытием и каждая встреча - источником вдохновения."</span></span>
+						</div>
+					</div>
+					<div class="social_icons icon-circle "> <a target="_blank" class="sn sn-vk  link_vk"
+							href="https://vk.com/club225676178"></a> <a target="_blank" class="sn sn-ins  link_ins"
+							href=""></a> <a target="_blank" class="sn sn-whatsup  hidden link_whatsup" href=""></a>
+						<a target="_blank" class="sn sn-fb  link_fb" href=""></a>
+						<a target="_blank" class="sn sn-youtube  link_youtube"
+							href="https://www.youtube.com/channel/UCMKObeZaDciE1zzcvsZJCxQ"></a> <a target="_blank"
+							class="sn sn-vimeo  hidden link_vimeo" href=""></a> <a target="_blank"
+							class="sn sn-rutube  hidden link_rutube" href=""></a><a target="_blank"
+							class="sn sn-tg  link_tg" href="https://t.me/+7qvoDb7hzHMzNzNi"></a>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="menus_block">
+					<div class="menu1 menu" style="color:#33333">
+						<div class="menu_text1 menu_text"><span style="color:#000000;"><strong>КОНТАКТЫ</strong></span>
+						</div>
+						<div class="menu1_ul" style="font-size:16px;color:#212121">
+							<ul>
+								<li class="level0"><a href="#kontakti" title="Контакты">Контакты</a></li>
+								<li class="level0"><a href="#svyaz" title="Связаться с нами">Связаться с нами</a></li>
+							</ul>
+						</div> <span style="font-size: 24px;">☎</span><a href="tel:8 800 340 14 88"> 8 800 340 14 88</a>
+					</div>
+					<div class="menu menu2" style="color:#33333">
+						<div class="menu_text2 menu_text"><span
+								style="color:#000000;"><strong>ИНФОРМАЦИЯ</strong></span></div>
+						<div class="menu2_ul" style="font-size:16px;color:#212121">
+							<ul>
+								<li class="level0"><a href="#regioni" title="Путешествия">Путешествия</a></li>
+								<li class="level0"><a href="#otzivy" title="Отзывы">Отзывы</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="menu menu3" style="color:#33333">
+						<div class="menu_text3 menu_text"><span style="color:#000000;"><strong>О
+									КОМПАНИИ</strong></span></div>
+						<div class="menu3_ul" style="font-size:16px;color:#212121">
+							<ul>
+								<li class="level0"><a href="#onas" title="О нас">О
+										нас</a></li>
+								<li class="level0"><a href="#kontakt" title="Сотрудники">Сотрудники</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="section editor1163 right_bottom section1163" style="display: none;"><a name="a_10832492"></a>
+			<a href="#" id="back-to-top" title="Наверх">
+				<i class="fa-solid fa-circle-chevron-up fa-3x" style="color: rgb(247, 159, 0);"></i>
+			</a>
+		</div>
+<style>
+	.section.editor1163.right_bottom.section1163 {
+    right: 75px; /* Сдвигаем элемент на 10px влево */
+    display: block; /* Показываем элемент */
+}
+</style>
+	</div>
+
+	<script>
+
+		(function () {
+
+			var resources_css = [
+				'https://fonts.googleapis.com/icon?family=Material+Icons&display=swap',
+				'/fonts/font-awesome-4.7.0/css/fa.min.css'
+			];
+
+			var resource = [];
+			_.each(resources_css, function (element, index) {
+				resource[index] = document.createElement('link');
+				resource[index].setAttribute("rel", "stylesheet");
+				resource[index].setAttribute("href", element);
+				resource[index].setAttribute("type", "text/css");
+
+				var head = document.getElementsByTagName('head')[0];
+				head.appendChild(resource[index]);
+			});
+
+		})();
+
+	</script>
+<script>
+	window.tobiz = { "project_id": "336892", "project_domain": "", "page_title": "\u0422\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043a\u043b\u0443\u0431 &quot\u0412\u0441\u0442\u0440\u0435\u0447\u0430&quot", "page_dir": "", "personal_seo_configs": "1", "seo_title": "", "seo_keywords": "", "seo_description": "", "OG_image": "ya.jpg", "access_control": "0", "valid_login": "", "valid_password": "", "pp": "0", "rep_id": "898208", "user_id": "255740", "owner_email": "ruslansohibnazarov20@gmail.com", "user_email": "ruslansohibnazarov20@gmail.com", "user_pnf": "120.00", "bs": true, "free": 0, "courses_on": "0", "products_on": "0", "articles_on": "0", "page_config": { "title_font": "Montserrat, sans-serif", "text_font": "Montserrat, sans-serif", "link_color": "#f79f00", "btn_shadow": "3", "btn_radius": "2", "btn_bg": "#ed7a00", "btn_bg_hover": "#f79700" }, "showIntro": 0, "basket_conf": null }
+</script>
+</body>
+</html>
